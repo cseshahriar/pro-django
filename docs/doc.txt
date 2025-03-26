@@ -1,0 +1,27 @@
+https://www.freecodecamp.org/news/how-to-build-and-publish-python-packages-with-poetry/
+
+poetry init
+poetry add django
+
+poetry add Django djangorestframework psycopg2 django-filter
+
+poetry install
+poetry lock
+poetry lock --no-update
+
+poetry export --output requirements.txt
+poetry run pytest
+poetry run python manage.py runserver
+
+pro_django
+mkdir -p local
+
+
+.editorconfig
+poetry add flake8
+poetry run flake8
+
+
+poetry add -D pre-commit
+poetry run pre-commit sample-config
+poetry run pre-commit install
