@@ -1,27 +1,29 @@
 https://www.freecodecamp.org/news/how-to-build-and-publish-python-packages-with-poetry/
 
+==============================================
+poetry
+================================================
 poetry init
 poetry add django
-
 poetry add Django djangorestframework psycopg2 django-filter
-
 poetry install
 poetry lock
 poetry lock --no-update
-
 poetry export --output requirements.txt
 poetry run pytest
 poetry run python manage.py runserver
-
-pro_django
 mkdir -p local
 
-
+===============================================================================
+flake8
+===============================================================================
 .editorconfig
 poetry add flake8
 poetry run flake8
 
-
+===============================================================================
+pre commit
+===============================================================================
 poetry add -D pre-commit
 poetry run pre-commit sample-config
 poetry run pre-commit install
@@ -40,3 +42,22 @@ poetry env info
 pre-commit autoupdate
 poetry run pre-commit install
 poetry run pre-commit run --all-files
+
+
+=======================================
+docker
+=======================================
+docker system prune --all
+
+WARNING! This will remove:
+  - all stopped containers
+  - all networks not used by at least one container
+  - all images without at least one container associated to them
+  - all build cache
+
+docker volume prune
+
+docker-compose -f docker-compose.dev.yml up --force-recreate db
+docker compose -f docker-compose.dev.yml up --force-recreate db  # worked
+
+sudo systemctl stop postgresql  # local postgresql stop

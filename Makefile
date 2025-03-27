@@ -28,3 +28,8 @@ superuser:
 
 .PHONY: update
 update: install migrate install-pre-commit;
+
+.PHONY: up-dependencies-only
+up-dependencies-only:
+	test -f .env || touch .env
+	docker compose -f docker-compose.dev.yml up --force-recreate db

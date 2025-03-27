@@ -45,8 +45,14 @@ WSGI_APPLICATION = 'core.project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': '/home/shosen/projects/pro-project/db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'cooking_core',
+        'USER': 'cooking_core',
+        'PASSWORD': 'cooking_core',
+        'HOST': 'localhost',
+        'PORT': '5432',
+        'ATOMIC_REQUESTS': True,
+        'CONN_MAX_AGE': 600,
     }
 }
 

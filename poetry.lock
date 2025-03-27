@@ -231,6 +231,17 @@ optional = false
 python-versions = ">=3.8"
 
 [[package]]
+name = "python-dotenv"
+version = "1.1.0"
+description = "Read key-value pairs from a .env file and set them as environment variables"
+category = "main"
+optional = false
+python-versions = ">=3.9"
+
+[package.extras]
+cli = ["click (>=5.0)"]
+
+[[package]]
 name = "pyyaml"
 version = "6.0.2"
 description = "YAML parser and emitter for Python"
@@ -335,7 +346,7 @@ test = ["covdefaults (>=2.3)", "coverage-enable-subprocess (>=1)", "coverage (>=
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "571c159a3875126173d765585e45a02869403c44672b96457457f283896984a5"
+content-hash = "41796be5fde9df4070cd8cfdb72721a089f5b9b1a5561e7c58955c8726d4511f"
 
 [metadata.files]
 asgiref = []
@@ -359,6 +370,7 @@ pre-commit = []
 psycopg2 = []
 pycodestyle = []
 pyflakes = []
+python-dotenv = []
 pyyaml = []
 sqlparse = []
 tomli = []
