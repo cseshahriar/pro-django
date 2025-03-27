@@ -36,3 +36,7 @@ pre-commit clean
 
 python --version
 poetry env info
+
+pre-commit autoupdate
+poetry run pre-commit install
+poetry run pre-commit run --all-files

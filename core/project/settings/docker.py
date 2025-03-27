@@ -1,5 +1,5 @@
-if IN_DOCKER:  # noqa
+if IN_DOCKER:  # type: ignore  # noqa
     print('------ running in Docker mode ....')
-    assert MIDDLEWARE[:1] == [  # noqa
+    assert MIDDLEWARE[:1] == [   # type: ignore # noqa
         'django.middleware.security.SecurityMiddleware',
     ]
