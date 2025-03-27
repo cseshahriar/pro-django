@@ -25,3 +25,14 @@ poetry run flake8
 poetry add -D pre-commit
 poetry run pre-commit sample-config
 poetry run pre-commit install
+poetry run pre-commit run --all-files
+
+# Apply isort and yapf fixes
+poetry run pre-commit run isort --all-files
+poetry run pre-commit run yapf --all-files
+
+isort core/project/settings/envvars.py
+pre-commit clean
+
+python --version
+poetry env info
