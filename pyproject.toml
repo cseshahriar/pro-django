@@ -21,6 +21,7 @@ mypy = "^1.15.0"
 types-requests = "^2.32.0"
 types-PyYAML = "^6.0.12"
 types-toml = "^0.10.8"
+colorlog = "^6.9.0"
 
 [tool.isort]
 multi_line_output = 5
